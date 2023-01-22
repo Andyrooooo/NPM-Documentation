@@ -69,12 +69,12 @@ npm run <command name>
 }
 ```
 #### We will also see the ^ or ~ which are operators that specify what versions satisfy the range, they are
-* < less than this version
-* > Greater than this version
-* = Equal to this version
+* (<) less than this version
+* (>) Greater than this version
+* (=) Equal to this version
 * "version" it must match this version exactly
-* >= Greater than or equal to this version
-* <= Less than or equal to this version
+* (>=) Greater than or equal to this version
+* (<=) Less than or equal to this version
 
 #### In devDependencies which is very similar to depencencies property with the packages and their specific verion number, but devDependencies contains the packages and version numbers necessary for your development stage of your project. The dependencies property is only necessary for production and testing enviornments. 
 #### * If someone is planning on downloading and using your module in their program, then they probably don't want or need to download and build the external test or documentation framework that you use. *
