@@ -53,12 +53,52 @@ npm test
 npm run build
 `
 #### Within the scripts property there a quite a few of different default commands like start which starts a package, stop to stop a package, test to test a package, restart to restart a package and much, much more. [commands](https://docs.npmjs.com/cli/v9/commands?v=true) 🔗🔗
-#### Now to create your own command you would simply give it the name and value within the object. Once you created the script you will use this in the command line as shown above with "npm run (command name)
+#### Now to create your own command you would simply give it the name and value within the object. Once you created the script you will use this in the command line as shown above with 
+`
+npm run <command name>
+`
 
 ### What are dependencies? What does this section define? What are dev dependencies? Why is it important to define dev dependencies vs dependencies?
+#### Dependencies map the package name to the version range, or as I explained before, it will include other modules that the module uses with its version range that is required. Now, the version range is a string with one even more space separated descriptors. Here's an example below:
+```
+# example code
+"dependencies": {
+  "skateboard": "1.5.2",
+  "core": "^1.1.2",
+  "jump": ">0.1.2"
+}
+```
+#### We will also see the ^ or ~ which are operators that specify what versions satisfy the range, they are
+* < less than this version
+* > Greater than this version
+* = Equal to this version
+* "version" it must match this version exactly
+* >= Greater than or equal to this version
+* <= Less than or equal to this version
+
+#### In devDependencies which is very similar to depencencies property with the packages and their specific verion number, but devDependencies contains the packages and version numbers necessary for your development stage of your project. The dependencies property is only necessary for production and testing enviornments. 
+#### * If someone is planning on downloading and using your module in their program, then they probably don't want or need to download and build the external test or documentation framework that you use. *
 
 ### How do you install dependencies? Where do dependencies get installed?
+#### To install dependencies is very simple as you would run
+```
+npm install <dependencies>
+```
+#### Although this may be depreciated, but just to save you some confusion you may also run
+```
+# for depencencies
+npm install <dependencies> --save 
+# for devDependencies
+npm install (devDependencies> --save-dev
+```
+#### Once that is all said and done you will have the dependencies added to your package.json file. This happens because the request is made from npm to the registry, and once it is able to find your package it will pull from it to bring back to your file. 
 
 ### When running scripts with NPM, where does NPM look (path) for the dependencies of those scripts?
+#### When you run scripts with npm it goes into your node_modules/.bin to find those modules, if none are listed it will list available scripts to you. 
 
 ### Name 3 NPM commands, and why they are important.
+* **npm install** This one is a very important command as it allows you to install the packages you need for your project.
+* **npm uninstall** Equally as important because if the package you have is not what you want, then your able to remove the package and remove that module and look for something better without having to manually try to delete files.
+* **npm help** This one is very important because none of us can remember all the commands, and then I can look for a specific command there to help me out.
+* **npm prune** I thought this one might be super important, but when using "npm uninstall" to remove a package and then "npm install" to clean up your node_modules, the "npm prune" command will clean up packages from the node_module that aren't referenced in the package.json file.
+* **npm run** I just think this one will be important to me because it will give me the list of scripts available, and I know if we end up using this later I will probably need this. 
