@@ -52,6 +52,8 @@ npm test
 `
 npm run build
 `
+#### Within the scripts property there a quite a few of different default commands like start which starts a package, stop to stop a package, test to test a package, restart to restart a package and much, much more. [commands](https://docs.npmjs.com/cli/v9/commands?v=true) 🔗🔗
+#### Now to create your own command you would simply give it the name and value within the object. Once you created the script you will use this in the command line as shown above with "npm run (command name)
 
 ### What are dependencies? What does this section define? What are dev dependencies? Why is it important to define dev dependencies vs dependencies?
 
