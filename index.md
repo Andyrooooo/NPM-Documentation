@@ -29,7 +29,7 @@
 
 * **Keywords** - the keywords property is exactly what you would think it is, it is an array of keywords that identify the package, related modules, and software.
 
-* **License** - The license property tells you what license is being used by the project, the most typical usage is to use an SPDX License identifier. An example you may know is MIT, ISC, and GPL-3.0.      https://spdx.org/licenses/ 🔗🔗
+* **License** - The license property tells you what license is being used by the project, the most typical usage is to use an SPDX License identifier. An example you may know is MIT, ISC, and GPL-3.0. [spdx.org](https://spdx.org/licenses/) 🔗🔗
 
 * **eslintConfig** - this property takes care of code linting, it will look for and read automatically, or you can specify a configuration file 
 
