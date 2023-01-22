@@ -19,7 +19,7 @@
 
 * **Dependencies** - The dependencies property will include other modules that the module uses. Each entry in the dependencies property will include the name and version of other packages required to run this package.
 
-* **Main** - the main property is an entry point for the application, when the module is called it will fetch the data from the file that is contained in the main property.
+* **Main** - the main property is an entry point for the application, when the module is called it will export the data from the file that is contained in the main property.
 
 * **browserlist** - the browserlist property provides information about the browser compatibility of the app
 
@@ -37,7 +37,7 @@ https://spdx.org/licenses/ 🔗🔗
 * **devDependencies** - The devDependencies property is almost identical to the dependencies property in terms of structure. Although, the dependencies property is used to define the dependencies that a module needs to run in production, devDependencies property is used to define the dependencies the module needs to run in development.
 
 ### What is the scripts section of the package.json file? How do you use it? What are the default commands, and how do you use your own?
-#### The scripts property contains the aliases that we can use to access 
+#### As we said before the scripts property contains script commands that are then executed, these commands run at different times of the life cycle of your package. The life cycle event would be the name of your script or "key", and the value would be the script command that is run.
 
 ### What are dependencies? What does this section define? What are dev dependencies? Why is it important to define dev dependencies vs dependencies?
 
