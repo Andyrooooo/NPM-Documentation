@@ -38,12 +38,12 @@
 ### What is the scripts section of the package.json file? How do you use it? What are the default commands, and how do you use your own?
 #### As we said before the scripts property contains script commands that are then executed, these commands run at different times of the life cycle of your package. The life cycle event would be the name of your script or "key", and the value would be the script command that is run, this can typically range from a multitude of things for it to do. 
 #### Now to use just this section of the package.json file, we can use some example code:
-`# example code
+```# example code
 "scripts": {
   "test": "ls",
   "build": "tsc"
 }
-`
+```
 #### Then in your command line you can execute this
 `
 npm test
