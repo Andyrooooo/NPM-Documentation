@@ -36,7 +36,22 @@
 * **devDependencies** - The devDependencies property is almost identical to the dependencies property in terms of structure. Although, the dependencies property is used to define the dependencies that a module needs to run in production, devDependencies property is used to define the dependencies the module needs to run in development.
 
 ### What is the scripts section of the package.json file? How do you use it? What are the default commands, and how do you use your own?
-#### As we said before the scripts property contains script commands that are then executed, these commands run at different times of the life cycle of your package. The life cycle event would be the name of your script or "key", and the value would be the script command that is run.
+#### As we said before the scripts property contains script commands that are then executed, these commands run at different times of the life cycle of your package. The life cycle event would be the name of your script or "key", and the value would be the script command that is run, this can typically range from a multitude of things for it to do. 
+#### Now to use just this section of the package.json file, we can use some example code:
+`# example code
+"scripts": {
+  "test": "ls",
+  "build": "tsc"
+}
+`
+#### Then in your command line you can execute this
+`
+npm test
+`
+#### Now, to execute commands that are not default you would typically execute "npm run ___"
+`
+npm run build
+`
 
 ### What are dependencies? What does this section define? What are dev dependencies? Why is it important to define dev dependencies vs dependencies?
 
